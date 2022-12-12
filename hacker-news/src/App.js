@@ -1,11 +1,12 @@
 
 import './App.css';
 import hackernews from './hackernews.json'
+import Footer from './Components/Footer';
 
 function App() {
   return (
     <div>
-      <p>Hello</p>
+      <Footer />
     </div>
   
   );
