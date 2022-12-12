@@ -36,3 +36,31 @@
     transform: rotate(360deg);
   }
 }
+
+/* Aroj CSS styles for Footer*/
+
+.horizontal-break {
+  height: 3px;
+  background-color: rgb(225, 134, 48);
+  border: none;
+}
+
+.container-footer {
+  margin-top: 650px;
+}
+
+.termsAndConditions {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.searchField {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
