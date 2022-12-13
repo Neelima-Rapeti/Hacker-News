@@ -34,7 +34,7 @@ function Footer() {
                     <p>Contact</p>
                 </nav>
             <div className='searchField'>
-                <input type={"text"}
+                <input type={"search"}
                     value={inputValue}
                     placeholder="Type new keywords here"
                     onChange={saveInput}
