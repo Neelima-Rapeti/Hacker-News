@@ -9,13 +9,32 @@
 
   color:rgb(16, 16, 16);
   text-decoration: none;
+  padding :5px;
+  margin: 0px;
   
 
 }
 .nav-li{
   list-style-type:none;
 }
-.flex-box{
-
+.nav-style{
+  margin: 0px;
+  display: flex;
+  padding-inline-start: 0px;
+  align-items: center;
+ 
+}
   
+
+.nav-flex{
+
+  display: flex;
+  justify-content: space-between;
+}
+.hacker{
+  width: auto;
+}
+.login{
+ display: flex;
+justify-content: space-between;
 }
