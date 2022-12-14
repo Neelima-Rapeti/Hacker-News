@@ -7,24 +7,27 @@ import axios from "axios";
 
 export default function App() {
 
-const [post, setPost] = useState([]);
+
+const [searchKeyword, setSearchKeyword] = useState('');
+const [posts, setPosts] = useState([]);
+const [query,setQuery]= useState("react");
 console.log();
 
      useEffect(() => {
-      axios.get("http://hn.algolia.com/api/v1/search?tags=front_page")
+      axios.get(`http://hn.algolia.com/api/v1/search?query=${query}`)
       .then((response) => {
-      setPost(response.data.hits);
+      setPosts(response.data.hits);
      });
-      }, []);
+      }, [query]);
   return (
   <div>
     <Header />
-    {post?.map((posts) => {
+    {posts.map((post) => {
                 return(
-                  <li> {posts.title}</li>
+                  <li> {post.title}</li>
 
                 ) })}
-  <Footer post={post} />
+  <Footer setQuery={setQuery} />
     </div>
   
   );
