@@ -1,22 +1,21 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+
+
 
 function Footer() {
-    
-    const [inputValue, setInputValue] = useState("");
-    const [searchKeyword, setSearchKeyword] = useState([]);
+   
+    const [searchKeyword, setSearchKeyword] = useState('');
 
-    const saveInput = (event)=>{
-        setInputValue(event.target.value)
-    }
+  
 
-    const addSearchKeyword = ()=>{
-        if(!inputValue){
-            return "Type some keywords"
-        } else {
-            setSearchKeyword([...searchKeyword, inputValue])
-            setInputValue("")
-        }
-    }
+    // const addSearchKeyword = ()=>{
+    //     if(!inputValue){
+    //         return "Type some keywords"
+    //     } else {
+    //         setSearchKeyword([...searchKeyword, inputValue])
+    //         setInputValue("")
+    //     }
+    // }
 
   return (
     <div className='container-footer'>
@@ -35,12 +34,17 @@ function Footer() {
                 </nav>
             <div className='searchField'>
                 <input type={"search"}
-                    value={inputValue}
+                   value ={searchKeyword}
                     placeholder="Type new keywords here"
-                    onChange={saveInput}
-                >
+                   
+                    onChange ={(e)=> setSearchKeyword(e.target.value)}>
+                  
+                  
+                    
+                         )}
+
                 </input>
-                <button onClick={addSearchKeyword}>Search</button>
+               
             </div>
         </div>
       </div>
