@@ -18,12 +18,11 @@ function Footer({setQueryProp}) {
     }
 
     function handleKeyDown(e) {
-      
-      if (e.key === 'Enter'){
-      addSearchKeyword();
-      } 
-  }
-  
+
+        if (e.key === 'Enter'){
+        addSearchKeyword();
+        } 
+    }
 
   return (
     <div className='container-footer'>
@@ -45,7 +44,7 @@ function Footer({setQueryProp}) {
                     value={inputValue}
                     placeholder="Type new keywords here"
                     onChange={saveInput}
-                    onKeyDown={(e) => handleKeyDown(e)} 
+                    onKeyDown={(e) => handleKeyDown(e)}
                 >
                 </input>
                 <button onClick={addSearchKeyword}>Search</button>
