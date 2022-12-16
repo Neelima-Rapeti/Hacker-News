@@ -1,7 +1,5 @@
 import Header  from './Components/Header';
-import { useState, useEffect } from "react";
 import './App.css';
-import Header from './Components/Header'
 import Footer from './Components/Footer';
 import Posts from './Components/Posts';
 import axios from 'axios';
@@ -9,7 +7,7 @@ import React, { useState, useEffect } from 'react'
 import Pagination from './Components/Pagination';
 
 
-function App() {
+export default function App() {
 
   const [posts, setPosts] = useState([]);
   const [query, setQuery] = useState("tags=front_page");
@@ -50,7 +48,9 @@ function App() {
         <Pagination postsPerPage={postsPerPage} totalPosts = {posts.length} paginate={paginate}/>
       <Footer setQueryProp={setQuery}/>
 
-import Footer from './Components/Footer';
-import axios from "axios";
+    </div>
+);
+}
 
-export default function App() {
+
+
