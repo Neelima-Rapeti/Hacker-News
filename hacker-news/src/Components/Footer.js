@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
 
-function Footer() {
+function Footer({setQueryProp}) {
     
     const [inputValue, setInputValue] = useState("");
-    const [searchKeyword, setSearchKeyword] = useState([]);
 
     const saveInput = (event)=>{
         setInputValue(event.target.value)
@@ -11,9 +10,9 @@ function Footer() {
 
     const addSearchKeyword = ()=>{
         if(!inputValue){
-            return "Type some keywords"
+            return alert("No results found without any keywords");
         } else {
-            setSearchKeyword([...searchKeyword, inputValue])
+            setQueryProp(`query=${inputValue}`)
             setInputValue("")
         }
     }
@@ -24,13 +23,13 @@ function Footer() {
         <div className='col-12'>
             <hr className='horizontal-break'/>
                 <nav className='termsAndConditions'>
-                    <p>Guidelines </p>
-                    <p>FAQ </p>
-                    <p>Lists </p>
-                    <p>API </p>
-                    <p>Security </p>
-                    <p>Legal </p>
-                    <p>Apply to YC </p>
+                    <p>Guidelines </p> |
+                    <p>FAQ </p> |
+                    <p>Lists </p> |
+                    <p>API </p> |
+                    <p>Security </p> |
+                    <p>Legal </p> |
+                    <p>Apply to YC </p> |
                     <p>Contact</p>
                 </nav>
             <div className='searchField'>
