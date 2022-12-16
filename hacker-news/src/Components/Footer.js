@@ -40,7 +40,12 @@ function Footer({setQueryProp}) {
                 >
                 </input>
                 <button onClick={addSearchKeyword}>Search</button>
-            </div></div></div></div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
   );
 }
 

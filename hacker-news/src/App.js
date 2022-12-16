@@ -47,8 +47,10 @@ export default function App() {
         {posts.length === 0 && <h2 id='no-match-found'>No match found, try again!</h2>}
         <Pagination postsPerPage={postsPerPage} totalPosts = {posts.length} paginate={paginate}/>
       <Footer setQueryProp={setQuery}/>
+
     </div>
 );
 }
+
 
 
