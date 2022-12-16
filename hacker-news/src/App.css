@@ -91,12 +91,22 @@
   font-size: 14px;
 }
 
+.loading-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  padding-left: 2rem;
+  transition: 2000ms;
+}
+
 #no-match-found {
   color: black;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 14px;
+  margin-top: 5rem;
 }
 
 .pagination{
@@ -147,3 +157,8 @@
   gap: 1rem;
   margin-bottom: 1rem;
 }
+
+.mainContainer {
+  margin-left: 3rem;
+  margin-right: 3rem;
+ }

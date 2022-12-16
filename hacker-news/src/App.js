@@ -14,9 +14,11 @@ function App() {
   const [query, setQuery] = useState("tags=front_page");
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(5);
+  const [loading, setLoading] = useState(false);
 
 
   useEffect(() => {
+    setLoading(true)
     axios
       .get(`http://hn.algolia.com/api/v1/search?${query}`)
       .then((response) => {
@@ -26,6 +28,7 @@ function App() {
           console.log(list)
         }) */
         setPosts(response.data.hits);
+        setLoading(false);
       })
       .catch((err) => {
         console.log(err);
@@ -40,12 +43,11 @@ function App() {
   const paginate = (pageNumber)=> setCurrentPage(pageNumber);
 
   return (
-    <div>
+    <div className="mainContainer">
       <Header />
-        
-      <Posts posts={currentPosts}/>
-        {/* if the length (total numbers) of the posts is zero, that means if no posts are found, display a content with warning message */}
-        {posts.length === 0 && <h2 id='no-match-found'>No match found, try again!</h2>}
+      {loading ? (<div className='loading-message'>
+        <img src="https://retchhh.files.wordpress.com/2015/03/loading4.gif" alt="loading-image" style={{height: '100px'}}/>
+        </div>) : (<Posts posts={currentPosts}/>)}
         <Pagination postsPerPage={postsPerPage} totalPosts = {posts.length} paginate={paginate}/>
       <Footer setQueryProp={setQuery}/>
     </div>
