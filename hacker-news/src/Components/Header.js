@@ -1,80 +1,27 @@
-import React from 'react';
-const Header = () => {
+import React from 'react'
+
+function Header() {
   return (
     <>
-   
-    <nav className="navbar-background nav-style login ">
-
-        <div className='login' >
-        <div className='hacker'>
-            
-        <a className="font-color" href="#">
-      Hacker News
-      </a>
-      
+      <div className='row container-header'>
+        <div className='col-2'>
+          <p className='logo-text'>Hacker News</p>
         </div>
-      
-
-      <div>
-        <ul className="nav-style">
-        <li className="nav-item active nav-li">
-            <a className="font-color">
-              new 
-            </a>
-            
-           
-          </li>
-          <li className="nav-item nav-li">
-            <a className="nav-link font-color" href="#">
-              past
-            </a>
-          </li>
-          <li className="nav-item nav-li">
-            <a className="nav-link font-color" href="#">
-            comments
-            </a>
-          </li>
-          
-        
-          <li className="nav-item nav-li">
-            <a className="nav-link font-color" href="#">
-            ask
-            </a>
-          </li>
-          <li className="nav-item nav-li">
-            <a className="nav-link font-color" href="#">
-            show
-            </a>
-          </li>
-          <li className="nav-item nav-li">
-            <a className="nav-link font-color" href="#">
-            jobs
-            </a>
-            </li>
-            <li className="nav-item nav-li">
-            <a className="nav-link font-color" href="#">
-            submit
-            </a>
-            </li>
+        <ul className='col-8 header-list'>
+          <li>new</li> |
+          <li>past</li> |
+          <li>comments</li> |
+          <li>ask</li> |
+          <li>show</li> |
+          <li>jobs</li> |
+          <li>submit</li>
         </ul>
-        
-        
-
+        <div className='col-2'>
+          <p className='header-login'>login</p>
+        </div>
       </div>
-      </div> 
-      <div>
-      <div className="nav-style">
-        
-        <a className="font-color" href="#">
-      login
-      </a>
-        </div>
-        </div>
-    </nav>
     </>
-  );
-};
-     
+  )
+}
 
-  
-export default Header;
+export default Header
