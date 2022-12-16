@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
 function Footer({setQueryProp}) {
     
@@ -18,7 +18,7 @@ function Footer({setQueryProp}) {
     }
 
     function handleKeyDown(e) {
-      
+
         if (e.key === 'Enter'){
         addSearchKeyword();
         } 
@@ -48,11 +48,13 @@ function Footer({setQueryProp}) {
                 >
                 </input>
                 <button onClick={addSearchKeyword}>Search</button>
-            </div>
+
+          </div>
         </div>
       </div>
     </div>
-  )
+
+  );
 }
 
-export default Footer
+export default Footer;
