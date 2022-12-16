@@ -39,7 +39,7 @@ export default function App() {
   const paginate = (pageNumber)=> setCurrentPage(pageNumber);
 
   return (
-    <div>
+    <div className="mainContainer">
       <Header />
         
       <Posts posts={currentPosts}/>
