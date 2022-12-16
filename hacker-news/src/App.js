@@ -1,7 +1,5 @@
 import Header  from './Components/Header';
-import { useState, useEffect } from "react";
 import './App.css';
-import Header from './Components/Header'
 import Footer from './Components/Footer';
 import Posts from './Components/Posts';
 import axios from 'axios';
@@ -9,7 +7,7 @@ import React, { useState, useEffect } from 'react'
 import Pagination from './Components/Pagination';
 
 
-function App() {
+export default function App() {
 
   const [posts, setPosts] = useState([]);
   const [query, setQuery] = useState("tags=front_page");
@@ -49,36 +47,8 @@ function App() {
         {posts.length === 0 && <h2 id='no-match-found'>No match found, try again!</h2>}
         <Pagination postsPerPage={postsPerPage} totalPosts = {posts.length} paginate={paginate}/>
       <Footer setQueryProp={setQuery}/>
-
-import Footer from './Components/Footer';
-import axios from "axios";
-
-export default function App() {
-
-
-const [searchKeyword, setSearchKeyword] = useState('');
-const [posts, setPosts] = useState([]);
-const [query,setQuery]= useState("react");
-console.log();
-
-     useEffect(() => {
-      axios.get(`http://hn.algolia.com/api/v1/search?query=${query}`)
-      .then((response) => {
-      setPosts(response.data.hits);
-     });
-      }, [query]);
-  return (
-  <div>
-    <Header />
-    {posts.map((post) => {
-                return(
-                  <li> {post.title}</li>
-
-                ) })}
-  <Footer setQuery={setQuery} />
     </div>
-  
-  );
+);
 }
 
 
