@@ -1,9 +1,10 @@
 import Header  from './Components/Header';
+
 import './App.css';
 import Footer from './Components/Footer';
 import Posts from './Components/Posts';
 import axios from 'axios';
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 import Pagination from './Components/Pagination';
 
 
@@ -50,9 +51,16 @@ export default function App() {
         <Pagination postsPerPage={postsPerPage} totalPosts = {posts.length} paginate={paginate}/>
       <Footer setQueryProp={setQuery}/>
 
+
+    </div>
+  
+  );
+                }
+
     </div>
 );
 }
+
 
 
 
