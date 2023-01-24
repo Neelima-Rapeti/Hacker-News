@@ -19,7 +19,7 @@ export default function App() {
   useEffect(() => {
     setLoading(true)
     axios
-      .get(`http://hn.algolia.com/api/v1/search?${query}`)
+      .get(`https://hn.algolia.com/api/v1/search?${query}`)
       .then((response) => {
 /*         const list = []
         response.data.hits.forEach((key) => {
